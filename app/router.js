@@ -1,5 +1,6 @@
 import { AboutController } from "./controllers/AboutController.js";
 import { HomeController } from "./controllers/HomeController.js";
+import { PokeAPIController } from "./controllers/PokeAPIController.js";
 import { ValuesController } from "./controllers/ValuesController.js";
 import { AboutView } from "./views/AboutView.js";
 
@@ -10,13 +11,17 @@ import { AboutView } from "./views/AboutView.js";
 export const router = [
   {
     path: '',
-    controller: HomeController,
+    controller: PokeAPIController,
     view: /*html*/`
-    <div class="card">
-      <div class="card-body">
-        <p>Home Page</p>
-        <button class="btn btn-dark" onclick="app.HomeController.testButton()">😎</button>
-      </div>
+    <div class="container-fluid">
+    <section class="row" >
+    <div id="poke-list" class="col-3 bg-grey"></div>
+    <div id="active-spell" class="col-6"></div>
+    <div class="col-3 bg-grey text-light">
+      <div class="text-success" id="poke-count"> </div>
+      <div id="my-pokes"></div>
+    </div>
+    </section>
     </div>
     `
   },

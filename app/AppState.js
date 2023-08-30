@@ -4,6 +4,24 @@ import { isValidProp } from './utils/IsValidProp.js'
 import { loadState } from './utils/Store.js'
 
 class ObservableAppState extends EventEmitter {
+
+  pokes = []
+
+  // // NOTE data typing without a class
+  // /** @type {{name: string, index: string, url: string}[]} */
+  // spellList = []
+
+  // /** @type {Spell} */
+  // activeSpell = null
+
+  // /** @type {Spell[]} */
+  // mySpells = []
+
+
+
+
+
+
   page = ''
   user = null
   /** @type {import('./models/Account.js').Account | null} */
